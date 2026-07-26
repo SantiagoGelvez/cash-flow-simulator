@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Dark theme (default) — dark navy surfaces, gold/red/teal accents */
+  --color-surface: 15 20 32;
+  --color-surface-raised: 22 29 46;
+  --color-surface-sunken: 10 14 23;
+  --color-surface-border: 42 53 72;
+
+  --color-ink: 232 230 223;
+  --color-ink-muted: 168 176 192;
+  --color-ink-faint: 140 148 166;
+
+  --color-cash: 191 138 42;
+  --color-cash-soft: 58 46 24;
+
+  --color-alert: 228 100 124;
+  --color-alert-soft: 61 27 35;
+
+  --color-debt: 31 155 138;
+  --color-debt-soft: 20 45 42;
+}
+
+:root.light {
+  /* Light theme — warm parchment surfaces */
+  --color-surface: 247 245 240;
+  --color-surface-raised: 255 255 255;
+  --color-surface-sunken: 236 232 223;
+  --color-surface-border: 221 214 199;
+
+  --color-ink: 28 31 38;
+  --color-ink-muted: 86 95 110;
+  --color-ink-faint: 95 103 117;
+
+  --color-cash: 147 102 26;
+  --color-cash-soft: 238 227 202;
+
+  --color-alert: 185 45 75;
+  --color-alert-soft: 250 223 228;
+
+  --color-debt: 15 110 97;
+  --color-debt-soft: 214 238 234;
+}
+
+html {
+  color-scheme: dark;
+}
+
+html.light {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-surface text-ink font-sans antialiased;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+h1, h2, h3, h4 {
+  @apply font-display;
+}
+
+.font-tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline: 2px solid rgb(var(--color-cash));
+  outline-offset: 2px;
+}

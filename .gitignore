@@ -35,6 +35,7 @@ Thumbs.db
 # Cache
 .vite/
 *.local
+*.tsbuildinfo
 
 # Coverage / tests
 coverage/
